@@ -12535,30 +12535,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\isaltali\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\juwel\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\isaltali\\source\\repos\\AspNetCoreMVCLocalizationByURL\\AspNetCoreMVCLocalizationByURL\\AspNetCoreMVCLocalizationByURL.csproj",
+      "projectUniqueName": "C:\\workspace\\AspNetCoreMVCLocalizationByURL\\AspNetCoreMVCLocalizationByURL\\AspNetCoreMVCLocalizationByURL.csproj",
       "projectName": "AspNetCoreMVCLocalizationByURL",
-      "projectPath": "C:\\Users\\isaltali\\source\\repos\\AspNetCoreMVCLocalizationByURL\\AspNetCoreMVCLocalizationByURL\\AspNetCoreMVCLocalizationByURL.csproj",
-      "packagesPath": "C:\\Users\\isaltali\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\isaltali\\source\\repos\\AspNetCoreMVCLocalizationByURL\\AspNetCoreMVCLocalizationByURL\\obj\\",
+      "projectPath": "C:\\workspace\\AspNetCoreMVCLocalizationByURL\\AspNetCoreMVCLocalizationByURL\\AspNetCoreMVCLocalizationByURL.csproj",
+      "packagesPath": "C:\\Users\\juwel\\.nuget\\packages\\",
+      "outputPath": "C:\\workspace\\AspNetCoreMVCLocalizationByURL\\AspNetCoreMVCLocalizationByURL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\isaltali\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\juwel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"

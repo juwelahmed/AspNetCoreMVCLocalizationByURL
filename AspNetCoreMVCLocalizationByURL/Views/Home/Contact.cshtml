@@ -1,4 +1,6 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
+﻿@model AspNetCoreMVCLocalizationByURL.Models.Contact
+
+@using Microsoft.AspNetCore.Mvc.Localization
 
 @inject IViewLocalizer Localizer
 
@@ -7,6 +9,20 @@
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
+
+<form method="post" action="contact">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" asp-for="Name" class="form-control" aria-describedby="emailHelp" placeholder="Enter name">
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" asp-for="Email" class="form-control" placeholder="Enter email">
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
 <address>
     One Microsoft Way<br />

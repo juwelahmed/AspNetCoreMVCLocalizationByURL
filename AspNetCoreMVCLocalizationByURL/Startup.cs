@@ -41,6 +41,9 @@ namespace AspNetCoreMVCLocalizationByURL
                 {
                     new CultureInfo("en-US"),
                     new CultureInfo("tr-TR"),
+                    new CultureInfo("es-ES"),
+                    new CultureInfo("de-DE"),
+                    new CultureInfo("de-AT")
                 };
 
                 // State what the default culture for your application is. This will be used if no specific culture

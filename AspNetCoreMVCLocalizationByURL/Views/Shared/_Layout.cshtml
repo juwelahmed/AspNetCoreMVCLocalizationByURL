@@ -37,6 +37,10 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">@Localizer["Home"]</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">@Localizer["About"]</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">@Localizer["Contact"]</a></li>
+                    <li class="nav-item dropdown">
+                        
+                    </li>
+                    <li>@{await Html.RenderPartialAsync("_CulturePartial");}</li>
                 </ul>
             </div>
         </div>

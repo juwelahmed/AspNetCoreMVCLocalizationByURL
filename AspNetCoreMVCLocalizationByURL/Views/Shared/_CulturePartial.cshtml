@@ -1,0 +1,23 @@
+﻿@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+
+@inject IOptions<RequestLocalizationOptions> locOptions
+
+@{
+    var feature = Context.Features.Get<IRequestCultureFeature>();
+}
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    @feature.RequestCulture.UICulture.DisplayName
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    @foreach (var cultureInfo in locOptions.Value.SupportedUICultures)
+    {
+        var paths = Context.Request.Path.Value.Split("/", StringSplitOptions.RemoveEmptyEntries);
+        paths[0] = cultureInfo.TwoLetterISOLanguageName;
+        var path = string.Join("/", paths);
+        var absoluteUrl = string.Format("{0}://{1}/{2}{3}", Context.Request.Scheme, Context.Request.Host, path, Context.Request.QueryString);
+        <a class="dropdown-item" href="@absoluteUrl">@cultureInfo.DisplayName</a>
+    }
+</div>

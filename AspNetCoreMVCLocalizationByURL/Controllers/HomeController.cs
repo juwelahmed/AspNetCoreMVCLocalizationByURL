@@ -58,6 +58,16 @@ namespace AspNetCoreMVCLocalizationByURL.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Contact(Contact contact )
+        {
+            if(ModelState.IsValid)
+            {
+                return RedirectToAction(nameof(HomeController.Contact));
+            }
+
+            return View(contact);
+        }
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
