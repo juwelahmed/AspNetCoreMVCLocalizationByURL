@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using AspNetCoreMVCLocalizationByURL.Models;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Localization;
+using AspNetCoreMVCLocalizationByURL.Internationalization;
 
 namespace AspNetCoreMVCLocalizationByURL.Controllers
 {
@@ -41,6 +42,8 @@ namespace AspNetCoreMVCLocalizationByURL.Controllers
         }
         public IActionResult Index()
         {
+            string d = DaysOfWeek.Friday.ToLocalizedString();
+
             return View();
         }
 
@@ -72,5 +75,11 @@ namespace AspNetCoreMVCLocalizationByURL.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+    }
+
+    public class MyClass
+    {
+        public int id { get; set; }
+        public string name { get; set; }
     }
 }

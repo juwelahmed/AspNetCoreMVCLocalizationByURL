@@ -1,8 +1,10 @@
 ﻿using System.Globalization;
+using AspNetCoreMVCLocalizationByURL.Validation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
@@ -32,8 +34,15 @@ namespace AspNetCoreMVCLocalizationByURL
                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                // Add support for localizing strings in data annotations (e.g. validation messages) via the
                // IStringLocalizer abstractions.
-               .AddDataAnnotationsLocalization();
+               .AddDataAnnotationsLocalization(
+                (o => o.DataAnnotationLocalizerProvider = (type, factory) => factory.Create(typeof(ErrorMessages)))
+               );
 
+            services.Configure<MvcOptions>(options =>
+            {
+                options.ModelMetadataDetailsProviders.Add(
+                    new CustomValidationMetadataProvider());
+            });
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
