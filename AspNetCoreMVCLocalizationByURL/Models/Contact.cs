@@ -12,8 +12,10 @@ namespace AspNetCoreMVCLocalizationByURL.Models
         [Required]
         [MaxLength(10)]
         public string Name { get; set; }
+
         [Required]
         [MaxLength(20)]
+        [EmailAddress]
         public string Email { get; set; }
     }
 }

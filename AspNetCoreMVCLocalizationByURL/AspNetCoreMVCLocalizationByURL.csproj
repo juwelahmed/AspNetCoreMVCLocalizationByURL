@@ -19,6 +19,14 @@
     <EmbeddedResource Update="Resources\Controllers\HomeController.tr-TR.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Enum\DaysOfWeekResource.resx">
+      <LastGenOutput>DaysOfWeekResource.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Enum\DaysOfWeekResource.tr-TR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DaysOfWeekResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Views\Home\About.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
@@ -43,6 +51,18 @@
     <EmbeddedResource Update="Resources\Views\Shared\_Layout.tr-TR.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Internationalization\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Enum\DaysOfWeekResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DaysOfWeekResource.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>
